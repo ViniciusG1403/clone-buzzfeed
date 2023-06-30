@@ -1,1 +1,24 @@
-<app-question-card></app-question-card>
+<div class="quizz__container">
+  <div class="title-container">
+    <h3>{{ title }}</h3>
+  </div>
+
+  <div *ngIf="!finished" class="question-card">
+    <h3>{{ questionSelected.question }}</h3>
+  </div>
+
+  <div *ngIf="!finished" class="answer-card">
+    <button
+      *ngFor="let option of questionSelected.options; let i = index"
+      (click)="playerChoose(option.alias)"
+      class="btn-option"
+    >
+      {{ option.name }}
+    </button>
+  </div>
+
+  <div *ngIf="finished" class="result-card">
+    <h1>O Seu resultado é:</h1>
+    <p>{{ answerSelected }}</p>
+  </div>
+</div>
