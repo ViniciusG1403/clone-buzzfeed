@@ -72,4 +72,8 @@ export class HomeComponent implements OnInit {
 
     return result;
   }
+
+  resetPage() {
+    window.location.reload();
+  }
 }

@@ -67,3 +67,20 @@
   color: white;
   font-size: 25px;
 }
+
+.result-card button {
+  width: 90%;
+  height: 55px;
+  background-color: rgba(0, 0, 0, 0.342);
+  border: none;
+  border-radius: 10px;
+  filter: drop-shadow (0px 0px 5px black);
+  font-family: "Oswald", sans-serif;
+  color: white;
+  font-size: 20px;
+}
+
+button:hover {
+  transition: 1s;
+  transform: scale(1.1);
+}
